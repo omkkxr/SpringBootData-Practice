@@ -32,7 +32,7 @@ public class ICoronaVaccineServiceMgmtImpl implements ICoronaVaccineServiceMgmt 
 	@Override
 	public void fetchDetailsbyPagination(int pageSize) {
 
-		long count=9;
+		long count=repo.count();
 
 		long pagesCount=count/pageSize;
 		 pagesCount=count%pageSize==0?pagesCount:++pagesCount;
